@@ -1,0 +1,23 @@
+public class BandBooster
+{
+   private int sold;
+   private String name;
+   
+   public BandBooster(String nam, int boxesSold) {
+       name = nam;
+       sold = 0;
+   }
+   
+   public String getName() {
+       return name;
+   }
+   
+   public int updateSales(int plus) {
+       sold += plus;
+       return sold;
+   }
+   
+   public String toString() {
+       return name + ": \t" + sold;
+   }
+}
