@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class BoosterThing
+{
+    public static void main(String[] args) {
+        String name1, name2;
+        int num1, num2;
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Please enter the first name.");
+        name1 = scan.nextLine();
+        
+        System.out.println("Please enter the second name.");
+        name2 = scan.nextLine();
+        
+        BandBooster one = new BandBooster(name1, 0);
+        BandBooster two = new BandBooster(name2, 0);
+        
+        System.out.println("Please enter the number of boxes sold by the first student the first week.");
+        num1 = scan.nextInt();
+        System.out.println("Please enter the number of boxes sold by the second student the first week.");
+        num2 = scan.nextInt();
+        
+        one.updateSales(num1);
+        two.updateSales(num2);
+        
+        System.out.println("Please enter the number of boxes sold by the first student the second week.");
+        num1 = scan.nextInt();
+        System.out.println("Please enter the number of boxes sold by the second student the second week.");
+        num2 = scan.nextInt();
+        
+        one.updateSales(num1);
+        two.updateSales(num2);
+        
+        System.out.println("Please enter the number of boxes sold by the first student the third week.");
+        num1 = scan.nextInt();
+        System.out.println("Please enter the number of boxes sold by the second student the third week.");
+        num2 = scan.nextInt();
+        
+        one.updateSales(num1);
+        two.updateSales(num2);
+        
+        System.out.println(one);
+        System.out.println(two);
+    }
+}
